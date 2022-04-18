@@ -60,7 +60,6 @@
             &.on {
                 h3 {
                     background-color: #0158a8;
-                    color:#fff;
                     &::after {
                         content: " ";
                         position: absolute;
@@ -73,6 +72,9 @@
                         border-width: 25px 0 25px 32px;
                         border-color: transparent transparent transparent #0158a8;
                         margin-top: -25px;
+                    }
+                    a {
+                        color:#fff;
                     }
                 }
                 .swiper {
@@ -97,21 +99,20 @@
                         position: absolute;
                         width: 18px;
                         height: 18px;
-                        top: 50%;
+                        top: 55%;
                         transform: translateY(-50%);
                         display: block;
                         z-index: 11;
-                        border:solid 1px #fff;
                         &.prev{
-                            left:50px;
+                            left:45px;
                             background-position: -241px -285px;
                         }
                         &.next {
-                            right:2px;
+                            right:6px;
                             background-position: -256px -285px;
                         }
                         &.stop {
-                            right:21px;
+                            right:25px;
                             background-position: -285px -285px;
                             
                         }
@@ -135,8 +136,8 @@
                         &::after {
                             content: '';
                             position: absolute;
-                            top: -8px;
-                            right: -10px;
+                            top: -7px;
+                            right: -13px;
                             width: 1px;
                             height: 24px;
                             background: rgba(255,255,255,.5);
@@ -259,11 +260,28 @@
         }
         .seoul_wrap {
             margin-top: 7px;
+            position: relative;
+            a {
+                position: absolute;
+                bottom:15px;
+                display: block;
+                width: 100px;
+                height: 30px;
+                &.bannerbtn1 {
+                    left: 15px;
+                    background:url('../img/banner_btn1.png') center/100% no-repeat;
+                }
+                &.bannerbtn2 {
+                    left:120px;
+                    background:url('../img/banner_btn2.png') center/100%  no-repeat;
+                }
+            }
+
         }
     }
 }
 
-section {
+.section {
     h2 {
         padding: 0 0 20px 0;
         font-size: 24px;
@@ -531,6 +549,7 @@ section {
                     &.orange_cate {background-color: #d76000;}
                     &.purple_cate {background-color: #9b64d3;}
                     &.blue_cate {background-color: #337ee2;}
+                    &.green_cate {background-color: #599100;}
                 }
             }
             .news_txt {
@@ -581,6 +600,7 @@ section {
         width: 480px;
         margin-right: 22px;
         ul {
+            overflow: hidden;
             li {
                 padding: 8px 0;
                 width: 100%;
@@ -591,7 +611,7 @@ section {
                 color: #555555;
                 line-height: 20px;
                 a {
-
+                    width:100%;
                 }
                 .news_cate {
                     flex-shrink: 0;
@@ -678,24 +698,82 @@ section {
     }
 }
 
-.sc_acmini {
+.sc_advert {
     padding: 50px 0 50px 0;
     border-top: 2px solid #222;
+    position: relative;
     .swiper {
         width: 100%;
         height: 100%;
     }
 
     .swiper-slide {
-    width: 355px;
-    background: #fff;
+        width: 355px;
+        background: #fff;
     }
 
     .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .btn_control {
+        position: absolute;
+        right: 3px;
+        bottom: 10px;
+        width: 110px;
+        display: block;
+        height: 30px;
+        a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #999;
+            &.prev{
+                left:42px;
+                background-position: -45px -43px;
+            }
+            &.next {
+                right:4px;
+                background-position: -86px -43px;
+            }
+            &.stop {
+                right:25px;
+                background-position: -65px -43px;
+                
+            }
+            &.play {
+                display: none;
+                right:25px;
+                background-position: -101px -43px;
+            }
+            
+        }
+       
+        .swiper-pagination {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+            color:#000;
+            font-size: 15px;
+            width:auto;
+            height: 18px;
+            &::after {
+                content: '';
+                position: absolute;
+                top: -7px;
+                right: -13px;
+                width: 1px;
+                height: 24px;
+                background: rgba(255,255,255,.5);
+            }
+        }
     }
 }
 

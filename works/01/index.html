@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>서울특별시 - 다시 뛰는 공정도시 서울</title>
+    <link rel="shortcut icon" href="./img/favicon.ico.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/main.css">
     <link
@@ -12,14 +13,6 @@
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
   />
 </head>
-<!-- 
-    img alt 
-    blind로 제공되어야할 텍스트는 제공해야한다.
-    board section 으로묶기 more btn 순서 맨마지막
-    tabindex - 사용해보기
-    서울소식 수정
-
- -->
 <body>
     <header>
         <div class="inner">
@@ -44,16 +37,18 @@
             </div>
             <div class="search_area">
                 <h2 class="logo2"><span class="blind">너와 나의 서울</span></h2>
-                
                 <div class="search_box">
                     <form action="" method="get">
                         <fieldset>
                             <legend class="blind">검색</legend>
                             <input type="text" class="search_txt" placeholder="검색어를 입력해 주세요">
                             <a href="" class="search_keyboard">
-                                <img src="./img/keyboard_icon.png" alt="">
+                                <span class="blind">키보드</span>
+                                <img src="./img/keyboard_icon.png" alt="키보드">
                             </a>
-                            <button class="search_btn"></button>
+                            <button class="search_btn">
+                                <span class="blind">검색버튼</span>
+                            </button>
                         </fieldset>
                     </form>
                 </div>
@@ -64,7 +59,7 @@
                         </div>
                         <div class="weather_txt">
                             <p>
-                                <strong>12.1℃</strong> <span class="wt_txt">맑음</span>
+                                <strong><span class="blind">오늘날씨</span>12.1℃</strong><span class="wt_txt">맑음</span>
                             </p>
                             <p>
                                 <span class="dust">미세먼지(보통) 초미세먼지(좋음)</span>
@@ -73,13 +68,31 @@
 
                     </a>
                 </div>
+                <div class="laug">
+                    <span class="blind">언어선택하기</span>
+                    <form action="">
+                        <select id="lauglist" name="language">
+                            <option value="ENGLISH">
+                                ENGLISH
+                            </option>
+                            <option value="japan">
+                                日本語
+                            </option>
+                            <option value="china">
+                                简体中文
+                            </option>
+                        </select>
+                        <input type="button" class="select_btn" value="GO">
+                    </form>
+                </div>
+
             </div>
         </div>
 
     </header>
     <main>
         <div class="inner">
-            <section class="sc_main">
+            <div class="sc_main">
                 <div class="slide_wrap">
                     <div class="slide slide_top on">
                         <h3 class="titletop">
@@ -208,31 +221,49 @@
                 </div>
                 <div class="banner">
                     <div class="cont_wrap">
-                        <span class="blind">코로나 19 현황</span>
                         <img src="./img/bannerbg.jpg" alt="코로나19현황">
                         <a href="" class="corona_area">
+                            <span class="blind">코로나 19 현황</span>
                             <em class="date">2022.03.26.00시 기준</em>
-                            <span class="new_number">64,026</span>
-                            <span class="cum_number">2,517,137</span>
+                            <span class="new_number">
+                                <span class="blind">코로나19 신규확진자</span>
+                                64,026
+                            </span>
+                            <span class="cum_number">
+                                <span class="blind">코로나19 누적확진자</span>
+                                2,517,137
+                            </span>
                         </a>
                         <a href="" class="vaccine">
+                            <span class="blind">예방접종률 현황</span>
                             <em class="date">2022.03.26.00시 기준</em>
-                            <span class="percent1">88.5%</span>
-                            <span class="percent2">87.6%</span>
-                            <span class="percent3">62.5%</span>
-                            <span class="percent4">0.3%</span>
+                            <span class="percent1">
+                                <span class="blind">예방접종률현황 1차</span>
+                                88.5%
+                            </span>
+                            <span class="percent2">
+                                <span class="blind">예방접종률현황 2차</span>
+                                87.6%
+                            </span>
+                            <span class="percent3">
+                                <span class="blind">예방접종률현황 3차</span>
+                                62.5%
+                            </span>
+                            <span class="percent4">
+                                <span class="blind">예방접종률현황 4차</span>
+                                0.3%
+                            </span>
                         </a>
                     </div>
                     <div class="seoul_wrap">
                         <img src="./img/bannerimg.jpg" alt="서울특별시장게시판">
-                        <a href="" class=""><span class="blind">시장에게 바란다</span></a>
-                        <a href="" class=""><span class="blind">공약(매니페스토)</span></a>
+                        <a href="" class="bannerbtn1"><span class="blind">참여공간 바로가기링크</span></a>
+                        <a href="" class="bannerbtn2"><span class="blind">공약보러가기 링크</span></a>
                     </div>
                 </div>
-            </section>
-            <section class="sc_service">
+            </div>
+            <div class="section sc_service">
                 <h2>주요 서비스</h2>
-                <a href="" class="service_btn">전체누리집<i class="arrow"></i></a>
                 <ul>
                     <li class="service">
                         <a href="">
@@ -301,9 +332,10 @@
                         </a>
                     </li>
                 </ul>
-            </section>
+                <a href="" class="service_btn">전체누리집<i class="arrow"></i></a>
+            </div>
         </div>
-        <section class="sc_guide">
+        <div class="sc_guide">
             <div class="inner">
                 <ul>
                     <li>
@@ -328,12 +360,11 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </div>
         <div class="inner">
-            <section class="sc_board">
-                <div class="board">
+            <div class="section sc_board">
+                <section class="board">
                     <h2>이벤트 신청</h2>
-                    <a href="" class="more_btn"><span class="blind">이벤트 신청 더보기</span></a>
                     <ul>
                         <li>
                             <span class="cate1">문화</span>
@@ -366,10 +397,10 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div class="board">
+                    <a href="" class="more_btn"><span class="blind">이벤트 신청 더보기</span></a>
+                </section>
+                <section class="board">
                     <h2>이달의 행사 및 축제</h2>
-                    <a href="" class="more_btn"><span class="blind">이달의 행사 및 축제 더보기</span></a>
                     <ul>
                         <li>
                             <span class="cate1">문화</span>
@@ -402,8 +433,9 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div class="service_board">
+                    <a href="" class="more_btn"><span class="blind">이달의 행사 및 축제 더보기</span></a>
+                </section>
+                <section class="service_board">
                     <h2>자주 찾은 서비스</h2>
                     <ul class="service_link">
                         <li><a href="">서울안전누리</a></li>
@@ -417,10 +449,10 @@
                         <li><a href="">내손안에서울</a></li>
                         <li><a href="">서울부동산정보광장</a></li>
                     </ul>
-                </div>
+                </section>
 
-            </section>
-            <section class="sc_info">
+            </div>
+            <div class="section sc_info">
                 <h2>분야별 정보</h2>
                 <ul>
                     <li>
@@ -473,8 +505,8 @@
                         </a>
                     </li>
                 </ul>
-            </section>
-            <section class="sc_news">
+            </div>
+            <div class="section sc_news">
                 <h2>새소식</h2>
                 <ul>
                     <li>
@@ -484,14 +516,14 @@
                                 <h3 class="sky_cate">행정</h3>
                             </div>
                             <p class="news_txt">
-                                ＇22년 서울마을미디어지원센터 콘텐츠 제작 및 교육 지원 대상 공개 모집
+                                22년 서울마을미디어지원센터 콘텐츠 제작 및 교육 지원 대상 공개 모집
                             </p>
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <div class="img_wrap">
-                                <img src="./img/newsimg2.jpg" alt="">
+                                <img src="./img/newsimg2.jpg" alt="한부모가족 가사서비스 '삶의 질↑'…지원 확대">
                                 <h3 class="orange_cate">복지</h3>
                             </div>
                             <p class="news_txt">
@@ -502,7 +534,7 @@
                     <li>
                         <a href="">
                             <div class="img_wrap">
-                                <img src="./img/newsimg3.jpg" alt="">
+                                <img src="./img/newsimg3.jpg" alt="개관 3주년 특별 프로그램‘다(多)가치 책보고’운영">
                                 <h3 class="purple_cate">문화</h3>
                             </div>
                             <p class="news_txt">
@@ -513,7 +545,7 @@
                     <li>
                         <a href="">
                             <div class="img_wrap">
-                                <img src="./img/newsimg4.jpg" alt="">
+                                <img src="./img/newsimg4.jpg" alt="공영주차장 전기차 주차요금 CCTV로 충전확인 되면 자동감면">
                                 <h3 class="blue_cate">교통</h3>
                             </div>
                             <p class="news_txt">
@@ -524,7 +556,7 @@
                     <li>
                         <a href="">
                             <div class="img_wrap">
-                                <img src="./img/newsimg5.jpg" alt="">
+                                <img src="./img/newsimg5.jpg" alt="중증장애인 10만 세대에 수도요금 감면…‘안심 생계’ 도모">
                                 <h3 class="orange_cate">복지</h3>
                             </div>
                             <p class="news_txt">
@@ -535,7 +567,7 @@
                     <li>
                         <a href="">
                             <div class="img_wrap">
-                                <img src="./img/newsimg6.jpg" alt="">
+                                <img src="./img/newsimg6.jpg" alt="4월 1일부터 카페 내 1회용컵 금지…제로웨이스트 서울 본격 추진">
                                 <h3 class="green_cate">환경</h3>
                             </div>
                             <p class="news_txt">
@@ -546,7 +578,7 @@
                     <li>
                         <a href="">
                             <div class="img_wrap">
-                                <img src="./img/newsimg7.jpg" alt="">
+                                <img src="./img/newsimg7.jpg" alt="스토킹 피해 신변보호대상자에 주거침입 예방 '안심장비 3종' 첫 지원">
                                 <h3 class="orange_cate">복지</h3>
                             </div>
                             <p class="news_txt">
@@ -563,8 +595,8 @@
                         </a>
                     </li>
                 </ul>
-            </section>
-            <section class="sc_board2">
+            </div>
+            <div class="section sc_board2">
                 <div class="video">
                     <h2>서울영상</h2>
                     <img src="./img/videoimg1.jpg" alt="서울안심소득유튜브바로보기">
@@ -576,26 +608,26 @@
                     <h2>서울소식</h2>
                     <ul>
                         <li>
+                            <a href=""> <span class="news_cate">고시공고</span></a>
                             <a href="">
-                                <span class="news_cate">고시공고</span>
                                 2022년 사회복지기금(장애인복지계정) 지원사업 선정 단체 공고
                             </a>
                         </li>
                         <li>
+                            <a href=""><span class="news_cate">입찰공고</span></a>
                             <a href="">
-                                <span class="news_cate">입찰공고</span>
                                 돈의문박물관마을 LED 미디어아트 콘텐츠 영상 제작 및 설치 용역 입찰 공고
                             </a>
                         </li>
                         <li>
+                            <a href=""><span class="news_cate">채용시험</span></a>
                             <a href="">
-                                <span class="news_cate">채용시험</span>
                                 교통정보과장 선발시험 서류전형 결과 공고
                             </a>
                         </li>
                         <li>
+                            <a href=""><span class="news_cate">보도자료</span></a>
                             <a href="">
-                                <span class="news_cate">보도자료</span>
                                 호기심 많은 `붉은 여우` 남매, 서울어린이대공원 새 식구로
                             </a>
                         </li>
@@ -614,14 +646,14 @@
                         <li><a href="" class="link_kakao"><span class="blind">카카오스토리</span></a></li>
                     </ul>
                 </div>
-            </section>
-            <section class="sc_acbanner">
+            </div>
+            <div class="sc_acbanner">
                 <a href="">
                     <img src="./img/acbanner.jpg" alt="서울 건축 산책링크">
                 </a>
-            </section>
-            <section class="sc_acmini">
-                <div class="swiper mySwiper">
+            </div>
+            <div class="sc_advert">
+                <div class="swiper advert">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide">
                             <a href="">
@@ -630,48 +662,48 @@
                         </li>
                         <li class="swiper-slide">
                             <a href="">
-                                <img src="./img/acbanner2.jpg" alt="서울시 국제교류 현황">
+                                <img src="./img/acbanner2.jpg" alt="이해충돌방지제도">
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="">
-                                <img src="./img/acbanner3.jpg" alt="서울시 국제교류 현황">
+                                <img src="./img/acbanner3.jpg" alt="임차소상공인 지킴자금 신청">
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="">
-                                <img src="./img/acbanner4.jpg" alt="서울시 국제교류 현황">
+                                <img src="./img/acbanner4.jpg" alt="서울페이로 달라지는점 확인">
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="">
-                                <img src="./img/acbanner5.jpg" alt="서울시 국제교류 현황">
+                                <img src="./img/acbanner5.jpg" alt="DATA STARS&GLOBAL">
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="">
-                                <img src="./img/acbanner6.jpg" alt="서울시 국제교류 현황">
+                                <img src="./img/acbanner6.jpg" alt="서울교통 주간브리핑">
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="">
-                                <img src="./img/acbanner7.jpg" alt="서울시 국제교류 현황">
+                                <img src="./img/acbanner7.jpg" alt="청탁금지법행동강령 위반행위 집중 신고기간 운영 ">
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="navigation">
-                    <div class="btn_wrap">
-                        <div class="swiper-pagination"></div>
-                        <a href="" class="btn prev"><span class="blind">이전</span></a>
-                        <a href="" class="btn stop"><span class="blind">이전</span></a>
-                        <a href="" class="btn next"><span class="blind">다음</span></a>
+                <div class="btn_control">
+                    <div class="swiper-pagination"></div>
+                    <a href="" class="btn prev"><span class="blind">이전</span></a>
+                    <div class="btns">
+                        <a href="" class="btn stop"><span class="blind">중지</span></a>
+                        <a href="" class="btn play"><span class="blind">재생</span></a>
+
                     </div>
-
+                    <a href="" class="btn next"><span class="blind">다음</span></a>
                 </div>
-
-            </section>
-            <section class="sc_sitewrap">
+            </div>
+            <div class="sc_sitewrap">
                 <ul class="site_gnb">
                     <li class="site_list">
                         <a href="" class="site_cate">직속기관·사업소</a>
@@ -766,7 +798,7 @@
                         </ul>
                     </li>
                 </ul>
-            </section>
+            </div>
         </div>
     
     </main>

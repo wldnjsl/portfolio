@@ -55,9 +55,6 @@ $(function(){
 
     $('.cont_slide1 .btns').click(function(e){
         e.preventDefault();
-        // slide01.autoplay.stop();
-        // $(this).find('.stop').hide();
-        // $(this).find('.play').show();
 
         if($(this).find('.stop').css('display') == 'none'){
             $(this).find('.stop').show();
@@ -85,18 +82,34 @@ $(function(){
         }
     })
 
-
-
-    var swiper = new Swiper(".sc_acmini .mySwiper", {
+    var slide03 = new Swiper(".sc_advert .advert", {
         slidesPerView: 3,
         spaceBetween: 40,
+        autoplay: {
+            delay:2000,
+        },
+        pagination: {
+            el: ".sc_advert .swiper-pagination",
+            type: "fraction",
+        },
         navigation: {
-        //   nextEl: ".btn_control .next",
-        //   prevEl: ".btn_control .prev",
+        nextEl: ".sc_advert .btn_control .next",
+        prevEl: ".sc_advert .btn_control .prev",
         },
     });
 
-
+    $('.sc_advert .btns').click(function(e){
+        e.preventDefault();
+        if($(this).find('.stop').css('display') == 'none'){
+            $(this).find('.stop').show();
+            $(this).find('.play').hide();
+            slide03.autoplay.start();
+        }else{
+            $(this).find('.stop').hide();
+            $(this).find('.play').show();
+            slide03.autoplay.stop();
+        }
+    })
 
     $('.site_list').click(function (e) { 
         e.preventDefault();
