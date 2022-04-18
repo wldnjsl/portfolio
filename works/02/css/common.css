@@ -1,0 +1,31 @@
+.blind {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    chip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+header .logo, a.link_start::after, a.link_junior, a.link_bin, .srh_btn i,
+.green i.sp_bg, .green a.shoplive,  .green a.shoping, a.more::after, a.media::after, .group_title a.title::before,
+.group_title a.title::after, .set_area i.list, .set_area i.tile, .set_area i.set, .group_list .prev,
+.group_list .next, .attn_set::before, .cate_list a.prev, .cate_list a.next, .recipe_list .list01 .sp_bg,  
+.list03 .sp_bg, .fund_hd .title::after, .list03 .more .sp_bg, .fund .next::before , .login_btn .sp_bg, .link_id::before, .link_join::before,.sc_cardnews .navi a.prev::before,
+.sc_cardnews .navi a.next::before {
+    background-image: url(../image/sp_bg.png);
+    background-size: 457px;
+    background-repeat: no-repeat;
+}
+.tab_hd .title::before, .tab_hd .title::after,
+.shop_tab .control_box a.prev::before,
+.shop_tab .control_box a.next::before
+{
+    background-image: url(../image/sp_bg2.png);
+    background-size: 107px;
+    background-repeat: no-repeat;
+}
+.weather_area a::before {
+    background-image: url(../image/sp_bg3.png);
+    background-size: 215px;
+    background-repeat: no-repeat;
+}
