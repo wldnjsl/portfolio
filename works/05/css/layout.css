@@ -1,0 +1,333 @@
+@import url("./reset.css");
+@import url("./normalize.css");
+@import url("./common.css");
+@font-face {
+  font-family: "S-CoreDream-4Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream-6Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "S-CoreDream-4Regular";
+  min-width: 320px;
+  overflow: hidden;
+  overflow-y: scroll;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+}
+
+header {
+  width: 100%;
+  height: 96px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 108px;
+  padding-left: 115.2px;
+  color: #1d243c;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(222, 234, 255, 0.85);
+  background-color: #fff;
+  font-weight: bold;
+  z-index: 10;
+}
+
+header .logo {
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+  background-position: center;
+  background-image: url("../img/lkealogo.svg");
+}
+header .logo a {
+  display: block;
+  height: 100%;
+}
+
+header .gnb {
+  display: flex;
+  width: 50%;
+  align-items: baseline;
+  font-size: 18px;
+}
+header .gnb::after {
+  content: "";
+  position: absolute;
+  top: 96px;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  height: 0;
+  overflow: hidden;
+  background: #fff;
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+header .gnb.on:after {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+header .gnb > li {
+  margin-right: 48px;
+}
+
+header .gnb > li > a {
+  padding: 35px 0;
+  display: block;
+  position: relative;
+}
+
+.gnb > li > a::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #000;
+  position: absolute;
+  width: 100%;
+  bottom: -2px;
+  opacity: 0;
+}
+
+.gnb > li > a:hover::after {
+  opacity: 1;
+  transition: all 0.8s;
+}
+
+.sub_wrap {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 96px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(222, 234, 255, 0.85);
+  background-color: #fff;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  visibility: hidden;
+  pointer-events: none;
+}
+.sub_wrap.on {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  pointer-events: initial;
+}
+
+.sub_wrap.on {
+  display: block;
+}
+
+.sub_wrap .sub_left {
+  padding: 35px 110px 100px;
+  background: #fff;
+  width: 48%;
+}
+
+.sub_wrap .sub_left .sub_gnb {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: right;
+}
+
+.sub_wrap .sub_gnb > li {
+  width: 50%;
+}
+
+.sub_wrap .sub_gnb .click_btn {
+  padding: 0 30px;
+  height: 45px;
+  border: 2px solid rgb(0, 88, 171);
+  border-radius: 30px;
+  background: rgb(0, 88, 171);
+  color: #fff;
+  display: inline-block;
+  margin-top: 20px;
+  line-height: 43px;
+}
+
+.sub_wrap .sub_gnb > li:last-child {
+  margin-top: 50px;
+  margin-left: auto;
+}
+
+.sub_gnb > li span {
+  display: block;
+  color: rgba(89, 111, 130, 0.65);
+}
+
+.sub_left .sub_menu {
+  margin-top: 16px;
+  font-size: 22px;
+}
+
+.sub_left .sub_menu li {
+  margin-top: 16px;
+}
+
+.sub_left .sub_menu li a {
+  margin-bottom: 12px;
+  line-height: 26px;
+}
+
+.sub_left .sub_menu li span {
+  font-size: 16px;
+}
+
+.sub_wrap .sub_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.sub_wrap .sub_right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .service {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  align-items: baseline;
+  font-size: 18px;
+}
+
+header .service li {
+  margin-left: 48px;
+  position: relative;
+}
+
+header .service li a {
+  padding: 38px 0;
+  display: block;
+}
+
+header .service li i {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+header .service li:first-child::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #000;
+  position: absolute;
+  width: 100%;
+  bottom: 1px;
+  opacity: 0;
+}
+
+header .service li:first-child:hover::after {
+  opacity: 1;
+  transition: all 0.8s;
+}
+
+header .service li:last-child:hover span {
+  color: #687784;
+}
+
+footer {
+  padding: 100px 0 50px;
+}
+footer .foot_menu {
+  padding: 0 300px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .foot_menu .logo {
+  width: 100px;
+  height: 40px;
+  background-image: url("../img/lkealogo.svg");
+}
+footer .foot_menu .logo a {
+  height: 100%;
+  display: block;
+}
+footer .foot_menu .foot_gnb {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+}
+footer .foot_menu .foot_gnb h3 {
+  font-size: 18px;
+  font-family: "S-CoreDream-6Bold";
+}
+footer .foot_menu .foot_gnb .foot_sub {
+  margin-top: 30px;
+}
+footer .foot_menu .foot_gnb .foot_sub li {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 23px;
+}
+footer .foot_menu .foot_gnb .foot_sub li a {
+  display: inline-block;
+}
+footer .tos_cont {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 0 300px;
+}
+footer .tos_cont ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .tos_cont ul li {
+  margin-top: 10px;
+  margin-right: 30px;
+  color: rgba(63, 73, 89, 0.8);
+  font-size: 13px;
+}
+footer .tos_cont span {
+  display: inline-block;
+  font-size: 16.8px;
+  color: rgba(15, 17, 23, 0.35);
+}
+footer .tos_cont .sns a {
+  margin-left: 20px;
+  display: inline-block;
+}
+footer .tos_cont .sns a i {
+  font-size: 22px;
+}
+footer .foot_line {
+  width: 100%;
+  height: 1px;
+  background-color: #ebf2f6;
+  margin-top: 30px;
+}
+footer .foot_cont {
+  padding: 0 300px;
+  margin-top: 30px;
+}
+footer .foot_cont address {
+  font-size: 13px;
+  line-height: 20px;
+}
+footer .foot_cont .copy {
+  font-size: 13px;
+  margin-top: 20px;
+}

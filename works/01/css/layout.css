@@ -106,6 +106,7 @@ header .search_area .search_box .search_txt {
   line-height: 38px;
   background-color: transparent;
   position: relative;
+  outline: none;
 }
 header .search_area .search_box .search_txt::-moz-placeholder {
   color: #2292e9;
