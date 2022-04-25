@@ -24,12 +24,6 @@ $(function() {
 
     
     
-    
-
-
-
-
-
     $('.nav a').click(function(e){
         e.preventDefault();
        var target = $(this).attr('href');

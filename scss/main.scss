@@ -117,6 +117,7 @@
         width: 33.33%;
         float: left;
         box-sizing: border-box;
+        position: relative;
         @include tablet{
             width: 50%;
         }
@@ -124,7 +125,6 @@
             width: 100%;
         }
 
-        
         .wrap{
             position: relative;
             padding-bottom: 100%;
@@ -135,21 +135,73 @@
                 background: rgba(0,0,0,0.3);
             }
         }
-        position: relative;
-        img{width: 100%;
-        height: 100%;object-fit: cover;
-        position: absolute;
-        top: 0;left: 0;right: 0;bottom: 0;}
-
        
-        h3{
+        img{
+            width: 100%;
+            height: 100%;object-fit: cover;
             position: absolute;
-            top: 50%;left: 50%;
-            z-index: 1;
-            transform: translate(-50%, -50%);
-            font-weight: bold;
+            top: 0;left: 0;right: 0;bottom: 0;
         }
+        .link_wrap{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.521);
+            padding: 30px;
+            box-sizing: border-box;
+            line-height: 1.5;
+            opacity: 0;
+            em {
+                font-size: 20px;
+                color:#fff;
+            }
+
+    
+        }
+      
+        &:hover {
+
+            .link_wrap{
+                transition: 0.5s;
+                opacity: 1;
+            }
+        }
+        h3{
+            // position: absolute;
+            // top: 50%;left: 50%;
+            z-index: 1;
+            // transform: translate(-50%, -50%);
+            font-weight: bold;
+            color:rgb(255, 252, 251);
+            font-size: 24px;
+        }
+
+        .links {
+            box-sizing: border-box;
+            margin-top: 20px;
+            .link_more {
+                width: 100px;
+                height: 50px;
+                border-radius: 20px;
+                padding: 5px 15px;
+                background: #fff;
+                color:#000;
+                &:hover {
+                    background: #000;
+                    color:#fff;
+                    transition: 0.3s;
+                }
+            }
+            .link_notion {
+                margin-top: 10px;
+                display: block;
+                font-size: 18px;
+                line-height: 30px;
+                
+            }
+        }
+
     }
-    .link_wrap{position: absolute;}
+
 
 }
