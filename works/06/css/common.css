@@ -1,0 +1,27 @@
+.blind {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+body { overflow: overlay; }
+::-webkit-scrollbar {
+    /* 스크롤바 전체 영역 */
+    width: 8px;
+} 
+
+::-webkit-scrollbar-track {
+    /* 스크롤이 움직이는 영역  */
+    background-color: rgba(0, 0, 0, 0);
+} 
+::-webkit-scrollbar-thumb {
+    /*  스크롤  */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius:30px;
+} 
+::-webkit-scrollbar-button:start:decrement, 
+::-webkit-scrollbar-button:end:increment {
+    display: none;
+    
+} 

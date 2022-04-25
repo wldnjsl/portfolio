@@ -1,0 +1,17 @@
+@mixin position_center ($top, $left, $x, $y) {
+    position: absolute;
+    left: $left; top: $top;
+    transform: translate($x, $y);
+}
+
+@mixin elip($line) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @if($line == 1){
+        white-space: nowrap;
+    }@else{
+        display: -webkit-box;
+        -webkit-line-clamp: $line; 
+        -webkit-box-orient: vertical;
+    }
+}

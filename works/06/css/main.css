@@ -1,0 +1,432 @@
+main {
+  padding-top: 95px;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.slide_all {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  overflow: hidden;
+}
+.slide_all .logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.slide_all .logo img {
+  width: 200px;
+}
+.slide_all div {
+  width: 100%;
+  height: 320px;
+  background-color: #000;
+  text-align: center;
+  line-height: 320px;
+}
+.slide_all div img {
+  width: 120px;
+  height: 26px;
+}
+.slide_all div.on.slide_black1 {
+  transform: translateX(100%);
+  transition: 2s;
+}
+.slide_all div.on.slide_black2 {
+  transform: translateX(100%);
+  transition: 2.5s;
+}
+.slide_all div.on.slide_black3 {
+  transform: translateX(100%);
+  transition: 3s;
+}
+
+.inner {
+  padding: 0 180px;
+  margin: 0 auto;
+}
+
+.sc_main {
+  width: 100%;
+}
+.sc_main .inner {
+  padding-bottom: 95px;
+  position: relative;
+}
+.sc_main .main_txt {
+  margin: 150px 0 95px;
+  overflow: hidden;
+}
+.sc_main .main_txt h2 {
+  position: relative;
+  left: 0;
+  bottom: -140px;
+  font-size: 120px;
+}
+.sc_main .main_line {
+  width: 0%;
+  height: 1px;
+  background: #000;
+}
+.sc_main .about_txt {
+  display: inline-block;
+  position: relative;
+  margin: 50px 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.sc_main .slide_btn {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+  z-index: 5;
+}
+.sc_main .slide_btn .round_btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #000;
+}
+.sc_main .slide_btn .round_btn i {
+  display: block;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 70px;
+}
+.sc_main .slide_btn .more_txt {
+  position: absolute;
+  display: block;
+  color: #fff;
+  left: -10px;
+  top: 90px;
+  white-space: nowrap;
+}
+.sc_main .main_img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+.sc_main .main_img .img_wrap {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top: 0;
+  left: 0;
+  background: url("../img/main_banner2.jpg") center/cover no-repeat;
+}
+
+.sc_aboutUs .inner {
+  padding: 170px 180px;
+}
+.sc_aboutUs .about_txt {
+  display: flex;
+  justify-content: space-between;
+}
+.sc_aboutUs .about_txt .txt_right {
+  width: 40%;
+}
+.sc_aboutUs .about_txt .txt_right span {
+  font-size: 20px;
+}
+.sc_aboutUs .about_txt .txt_right h2 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 95px;
+}
+.sc_aboutUs .about_txt .txt_right p {
+  font-size: 22px;
+  line-height: 40px;
+}
+.sc_aboutUs .about_bg {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 1200px;
+  background: #000;
+}
+.sc_aboutUs .about_bg .img_bg {
+  width: 100vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+}
+.sc_aboutUs .about_bg .aboutimg1 {
+  width: 500px;
+  height: 400px;
+  background-image: url("../img/shoes4.png");
+  top: 0px;
+  right: 100px;
+  z-index: 1;
+}
+.sc_aboutUs .about_bg .aboutimg2 {
+  background-image: url("../img/shoes5.png");
+  height: 400px;
+  width: 500px;
+  left: 100px;
+  top: -20px;
+}
+.sc_aboutUs .about_bg .aboutimg3 {
+  background-image: url("../img/Characters1.png");
+  width: 40%;
+  left: 25%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  height: 600px;
+}
+.sc_aboutUs .about_bg .aboutimg4 {
+  background-image: url("../img/Characters2.png");
+  width: 40%;
+  right: 25%;
+  bottom: 10%;
+  transform: translateX(50%);
+  height: 600px;
+}
+.sc_aboutUs .about_bg .txt_wrap {
+  position: absolute;
+  padding: 0 180px;
+  width: 80%;
+  margin: 0 auto;
+  z-index: 5;
+  color: #fff;
+  left: 50%;
+  bottom: 30%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.sc_aboutUs .about_bg .txt_wrap h3 {
+  font-size: 64px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100px;
+}
+.sc_aboutUs .about_bg .txt_wrap p {
+  margin: 60px auto 0;
+  font-size: 18px;
+  width: 60%;
+  text-align: center;
+  line-height: 30px;
+}
+.sc_aboutUs .about_bg .mountain_bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 600px;
+}
+
+.sc_circle {
+  position: relative;
+}
+.sc_circle .circle_wrap {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #000;
+  left: 0;
+  top: 0;
+  display: flex;
+}
+.sc_circle .circle_wrap .circle {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.sc_circle .circle_wrap .circle .round {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(248, 248, 248, 0.76);
+  position: absolute;
+  bottom: 10%;
+}
+.sc_circle .circle_wrap .circle .round span {
+  display: block;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 1.5em;
+  transform: translate(-50%, -50%);
+}
+.sc_circle .circle_wrap .circle .left {
+  left: 10%;
+}
+.sc_circle .circle_wrap .circle .right {
+  right: 10%;
+}
+.sc_circle .circle_wrap .right_area .imgcircle {
+  position: absolute;
+  right: 100%;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  overflow: hidden;
+}
+.sc_circle .circle_wrap .right_area .imgcircle img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sc_circle .circle_wrap .right_area .imgcircle .center_txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.sc_circle .circle_wrap .left_area .imgcircle {
+  position: absolute;
+  left: 100%;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  overflow: hidden;
+}
+.sc_circle .circle_wrap .left_area .imgcircle img {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sc_circle .circle_wrap .left_area .imgcircle .center_txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.sc_circle .round_bg {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.sc_circle .round_bg .center_round {
+  position: fixed;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 600px;
+  width: 600px;
+  display: block;
+  text-align: center;
+  line-height: 600px;
+  color: #fff;
+  font-size: 50px;
+  border: 1px solid #fff;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../img/round_bg4.jpg");
+}
+.sc_circle .add_txt {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 100%;
+}
+.sc_circle .add_txt .intro_gradation {
+  background: linear-gradient(0deg, #000 50%, transparent);
+  height: calc(100vh - 300px);
+}
+.sc_circle .add_txt .intro_bg {
+  height: 300px;
+  background: #000;
+}
+.sc_circle .add_txt .intro_bg .inner {
+  padding-bottom: 95px;
+}
+.sc_circle .add_txt .intro_bg .txt_wrap {
+  color: #fff;
+  margin: 0 auto;
+}
+.sc_circle .add_txt .intro_bg .txt_wrap h2 {
+  font-size: 60px;
+  text-align: center;
+}
+.sc_circle .add_txt .intro_bg .txt_wrap h2 span {
+  display: block;
+}
+.sc_circle .add_txt .intro_bg .txt_wrap p {
+  width: 700px;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.sc_intro {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+.sc_intro .intro {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.sc_intro .intro .img_wrap {
+  width: 50%;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.sc_intro .intro .img_wrap.intro_place {
+  background-image: url("../img/intro_img1.jpg");
+  background-position: center top;
+}
+.sc_intro .intro .img_wrap.intro_property {
+  background-image: url("../img/intro_img2.jpg");
+  background-position: center bottom;
+}
+.sc_intro .intro .img_wrap a {
+  color: #fff;
+  display: block;
+  position: relative;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.sc_intro .intro .img_wrap:hover a {
+  background: rgba(0, 0, 0, 0.2);
+  transition: 1s;
+}
+.sc_intro .intro .img_wrap h3 {
+  text-align: center;
+  font-size: 42px;
+  line-height: 600px;
+}
+.sc_intro .intro .img_wrap span {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  font-size: 18px;
+}
